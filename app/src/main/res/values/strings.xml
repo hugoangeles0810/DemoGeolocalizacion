@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DemoGeolocalizacion</string>
+    <string name="registrar_ubicacion">Registrar ubicación</string>
+</resources>
