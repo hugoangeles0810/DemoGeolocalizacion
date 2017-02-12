@@ -6,12 +6,15 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements LocationListener {
+
+    public static final String TAG = MainActivity.class.getSimpleName();
 
     public static final Long MIN_TIME_LOCATION_UPDATE = 2000L; // 2 seg
     public  static final Float MIN_DISTANCE_LOCATION_UPDATE = 0f;
@@ -73,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     @Override
     public void onLocationChanged(Location location) {
+        Log.d(TAG, location.toString());
         currentLocation = location;
     }
 
